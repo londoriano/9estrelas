@@ -22,6 +22,10 @@ body{
     font-family: var(--font);
 }
 
+.contador{
+    margin-bottom: 20px;
+}
+
 h1{
     font-size: 4.5em;
 }
@@ -45,6 +49,7 @@ h3{
 
 .btn-novoJogo{
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 5px 10px;
     font-size: 1.5rem;
     border: 0;
