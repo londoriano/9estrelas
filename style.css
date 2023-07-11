@@ -22,6 +22,14 @@ body{
     font-family: var(--font);
 }
 
+.estrelas{
+    margin-bottom: 15px;
+}
+
+.fa-star{
+    margin: 0 1px;
+}
+
 .contador{
     margin-bottom: 20px;
 }
