@@ -1,4 +1,4 @@
-let contador = 7;
+let contador = 10;
 
 function verificaSeOChutePossuiUmValorValido(chute) {
     const numero = +chute
