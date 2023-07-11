@@ -33,5 +33,5 @@ recognition.addEventListener('end', microOff)
 function microOff(){
     const micro = document.getElementById('micro')
     micro.innerHTML = 
-    `<i class="fa-solid fa-microphone"></i></i>`
+    `<i class="fa-solid fa-microphone fa-2xl"></i></i>`
 }
