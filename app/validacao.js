@@ -1,4 +1,4 @@
-let contador = 0;
+let contador = 12;
 
 function verificaSeOChutePossuiUmValorValido(chute) {
     const numero = +chute
@@ -21,17 +21,34 @@ function verificaSeOChutePossuiUmValorValido(chute) {
             <h3>O número secreto era ${numeroSecreto}</h3>
 
             <button id="jogar-novamente" class="btn-novoJogo" onClick="recomecar()">Jogar novamente</button>
-
             <p class="contador" id="contador">Tentativas: ${contador}</p>
         `
     } else if (numero > numeroSecreto) {
-        contador++
+        contador--
+        if (contador < 1) {
+            document.body.innerHTML = `
+            <h1>Game Over!</h1>
+            <h3>O número secreto era ${numeroSecreto}</h3>
+
+            <button id="jogar-novamente" class="btn-novoJogo" onClick="recomecar()">Jogar novamente</button>
+        `
+
+        }
         document.getElementById("contador").innerText = "Tentativas: " + contador
         elementoChute.innerHTML += `
         <div>O número secreto é menor <i class="fa-solid fa-down-long"></i></div>
         `
     } else {
-        contador++
+        contador--
+        if (contador < 1) {
+            document.body.innerHTML = `
+            <h1>Game Over!</h1>
+            <h3>O número secreto era ${numeroSecreto}</h3>
+
+            <button id="jogar-novamente" class="btn-novoJogo" onClick="recomecar()">Jogar novamente</button>
+        `
+
+        }
         document.getElementById("contador").innerText = "Tentativas: " + contador
         elementoChute.innerHTML += `
         <div>O número secreto é maior <i class="fa-solid fa-up-long"></i></div>
@@ -43,10 +60,10 @@ function chuteForInvalido(numero) {
     return Number.isNaN(numero)
 }
 
-function numeroForMaiorOuMenorQueOValorPermitido(numero){
+function numeroForMaiorOuMenorQueOValorPermitido(numero) {
     return numero > maiorValor || numero < menorValor
 }
 
-function recomecar(){
+function recomecar() {
     window.location.reload();
 }

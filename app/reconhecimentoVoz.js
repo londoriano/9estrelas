@@ -4,7 +4,7 @@ window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
 recognition.lang = 'pt-Br'
-recognition.start()
+
 
 recognition.addEventListener('result', onSpeak)
 
@@ -21,4 +21,17 @@ function exibeChuteNaTela(chute) {
      `
 }
 
-recognition.addEventListener('end', () => recognition.start())
+function microOn(){
+    recognition.start()
+    const micro = document.getElementById('micro')
+    micro.innerHTML = 
+    `<i class="fa-solid fa-ellipsis fa-beat"></i>`
+}
+
+recognition.addEventListener('end', microOff)
+
+function microOff(){
+    const micro = document.getElementById('micro')
+    micro.innerHTML = 
+    `<i class="fa-solid fa-microphone"></i></i>`
+}
