@@ -58,3 +58,7 @@ h3{
     background-color: var(--border-color);
     color: var(--button-color);
 }
+
+.micro{
+    margin-top: 15px;
+}
