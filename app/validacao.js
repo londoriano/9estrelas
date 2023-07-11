@@ -27,6 +27,7 @@ function verificaSeOChutePossuiUmValorValido(chute) {
         contador--;
 
         if (contador < 1) {
+            reproduzirAudio("/sons/fail.mp3");
             document.body.innerHTML = `
             <h1>Game Over!</h1>
             <h3>O número secreto era ${numeroSecreto}</h3>
