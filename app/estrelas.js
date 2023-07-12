@@ -11,7 +11,7 @@ function fazEstrelas(x) {
         estrelas.appendChild(estrela);
     }
 
-    let diferenca = (10 - x);
+    let diferenca = (9 - x);
 
     console.log(diferenca)
 
