@@ -18,8 +18,8 @@ function verificaSeOChutePossuiUmValorValido(chute) {
     if (numero === numeroSecreto) {
         reproduzirAudio("/sons/win.wav");
         document.body.innerHTML = `
-            <h1>Acertou Mizerávi!</h1>
-            <h3>O número secreto era ${numeroSecreto}</h3>
+            <h1>Acertou! Parabéns!</h1>
+            <h3>O número secreto era ${numeroSecreto}.</h3>
             <button id="jogar-novamente" class="btn-novoJogo" onClick="recomecar()">Jogar novamente</button>
         `
     } else if (numero > numeroSecreto) {
@@ -27,7 +27,7 @@ function verificaSeOChutePossuiUmValorValido(chute) {
         contador--;
 
         if (contador < 1) {
-            reproduzirAudio("/sons/fail.mp3");
+            reproduzirAudio("/sons/fail.wav");
             document.body.innerHTML = `
             <h1>Game Over!</h1>
             <h3>O número secreto era ${numeroSecreto}</h3>
