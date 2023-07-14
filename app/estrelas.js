@@ -13,8 +13,6 @@ function fazEstrelas(x) {
 
     let diferenca = (9 - x);
 
-    console.log(diferenca)
-
     for (let i = diferenca; i > 0; i--) {
         const estrelaVazia = document.createElement("i");
         estrelaVazia.classList.add("fa-regular", "fa-star", "fa-sm");
